@@ -13,30 +13,6 @@ import perlinPhoto from '../../imports/Perlin.jpeg';
 import jinwookPhoto from '../../imports/JW.jpg';
 import youjinPhoto from '../../imports/YS.jpeg';
 
-const instMeta: Record<string, { abbr: string; color: string }> = {
-  'KAIST':                      { abbr: 'KAIST',  color: '#1E3A8A' },
-  'University of Calgary':      { abbr: 'UCal',   color: '#D41E30' },
-  'Adelaide University':        { abbr: 'AdeUni', color: '#002147' },
-  'UCF':                        { abbr: 'UCF',    color: '#000000' },
-  'Simon Fraser University':    { abbr: 'SFU',    color: '#CC0000' },
-  'Purdue University':          { abbr: 'Purdue', color: '#C28E0E' },
-  'Carnegie Mellon University': { abbr: 'CMU',    color: '#C41230' },
-  'University of Washington':   { abbr: 'UW',     color: '#4B2E83' },
-  'New York University':        { abbr: 'NYU',    color: '#57068C' },
-};
-
-function InstMark({ affil, size = 32 }: { affil: string; size?: number }) {
-  const m = instMeta[affil] ?? { abbr: affil.slice(0, 4).toUpperCase(), color: '#334155' };
-  return (
-    <div
-      className="flex items-center justify-center font-black leading-none text-center flex-shrink-0"
-      style={{ backgroundColor: m.color, color: '#fff', width: size, height: size, fontSize: 8 }}
-    >
-      {m.abbr}
-    </div>
-  );
-}
-
 const organizers = [
   {
     type: 'Organizer',
@@ -89,7 +65,7 @@ const speakers = [
 function OrganizerCard({ org }: { org: (typeof organizers)[number] }) {
   return (
     <div className="bg-[#060D1F] group overflow-hidden">
-      <div className="aspect-[4/3] overflow-hidden">
+      <div className="aspect-square overflow-hidden">
         <ImageWithFallback
           src={org.photo}
           alt={org.name}
@@ -97,22 +73,17 @@ function OrganizerCard({ org }: { org: (typeof organizers)[number] }) {
           style={org.name === 'Sang Ho Yoon' ? { objectPosition: 'center 10%' } : undefined}
         />
       </div>
-      <div className="p-7 border-t border-white/10">
-        <div className="text-blue-400 text-[10px] uppercase tracking-widest mb-3">{org.type}</div>
-        <div className="flex items-center gap-3 mb-4">
-          <InstMark affil={org.affil} size={28} />
-          <div>
-            <div className="text-white font-black text-xl leading-none" style={{ fontFamily: 'Syne, sans-serif' }}>{org.name}</div>
-            <div className="text-slate-500 text-xs mt-0.5">{org.affil} · {org.role}</div>
-          </div>
+      <div className="p-4 border-t border-white/10">
+        <div className="text-blue-400 text-[9px] uppercase tracking-widest mb-2">{org.type}</div>
+        <div className="mb-2">
+          <div className="text-white font-black text-sm leading-tight" style={{ fontFamily: 'Syne, sans-serif' }}>{org.name}</div>
+          <div className="text-slate-500 text-[10px] mt-0.5">{org.affil} · {org.role}</div>
         </div>
-        <div className="space-y-1 pl-[40px]">
-          {org.website && (
-            <a href={org.website} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-blue-400 text-xs hover:text-blue-300">
-              <Globe className="w-3 h-3" />Website
-            </a>
-          )}
-        </div>
+        {org.website && (
+          <a href={org.website} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-blue-400 text-[10px] hover:text-blue-300">
+            <Globe className="w-2.5 h-2.5" />Website
+          </a>
+        )}
       </div>
     </div>
   );
@@ -134,13 +105,13 @@ export function CommitteesPage() {
         {/* ── ORGANIZERS — large photo cards ── */}
         <section className="mb-16">
           <div className="text-slate-600 text-[10px] uppercase tracking-widest mb-5">Organizing Committee</div>
-          <div className="grid md:grid-cols-2 gap-px bg-white/10 mb-2">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#060D1F] mb-2">
             {organizers.filter((org) => org.type === 'Organizer').map((org, i) => (
               <OrganizerCard key={i} org={org} />
             ))}
           </div>
           <div className="text-slate-600 text-[10px] uppercase tracking-widest mb-5 mt-10">Assistant Organizers</div>
-          <div className="grid md:grid-cols-2 gap-px bg-white/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#060D1F]">
             {organizers.filter((org) => org.type === 'Assistant Organizer').map((org, i) => (
               <OrganizerCard key={i} org={org} />
             ))}
@@ -154,7 +125,7 @@ export function CommitteesPage() {
         </h2>
           {/* <div className="text-slate-600 text-[10px] uppercase tracking-widest mb-5">Featured Speakers</div> */}
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#060D1F]">
             {speakers.map((sp, i) => (
               'website' in sp && sp.website ? (
                 <a
