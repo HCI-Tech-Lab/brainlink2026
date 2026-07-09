@@ -54,12 +54,12 @@ const organizers = [
 
 const speakers = [
   { name: 'Mark Billinghurst', affil: 'Adelaide University', affil2: 'University of Auckland', country: 'NZ / Australia', field: 'HCI · AR/VR · Empathic Computing', email: 'mark.billinghurst@unisa.edu.au', tel: '0406 407 031',  tracks: ['01'], photo: markPhoto, website: 'https://empathiccomputing.org/team/mark-billinghurst/' },
-  { name: 'Greg Welch', affil: 'UCF', affil2: '', country: 'USA', field: 'AR/VR · Cognitive Science', email: '', tel: '',  tracks: ['01'], photo: gregPhoto, website: 'https://sreal.ucf.edu/sreal/people/welch/' },
   { name: 'Anind Dey', affil: 'University of Washington', affil2: '', country: 'USA', field: 'Context-Aware Computing · Cognitive Modeling', email: '', tel: '', keynote: null, tracks: ['01'], photo: anindPhoto, website: 'https://ischool.uw.edu/people/faculty/profile/anind' },
-  { name: 'Karthik Ramani', affil: 'Purdue University', affil2: '', country: 'USA', field: 'Physical AI · 3D Interaction', email: '', tel: '', keynote: null, tracks: ['02'], photo: ramaniPhoto, website: 'https://engineering.purdue.edu/cdesign/wp/current-convergence-design-lab-members/' },
   { name: 'Scott Hudson', affil: 'Carnegie Mellon University', affil2: '', country: 'USA', field: 'HCI · AI', email: '', tel: '', tracks: ['02', '03'], photo: scottPhoto, website: 'https://www.cs.cmu.edu/~hudson/' },
-  { name: 'Wolfgang Stuerzlinger', affil: 'Simon Fraser University', affil2: '', country: 'Canada', field: '3D Spatial Interaction · HCI', email: '', tel: '', keynote: null, tracks: ['03'], photo: wolfgangPhoto, website: 'https://vvise.iat.sfu.ca/people/wolfgang-stuerzlinger' },
   { name: 'Ken Perlin', affil: 'New York University', affil2: '', country: 'USA', field: 'Computer Graphics · Interactive Technology', email: '', tel: '', tracks: ['04'], photo: perlinPhoto, website: 'https://cs.nyu.edu/~perlin/' },
+  { name: 'Karthik Ramani', affil: 'Purdue University', affil2: '', country: 'USA', field: 'Physical AI · 3D Interaction', email: '', tel: '', keynote: null, tracks: ['02'], photo: ramaniPhoto, website: 'https://engineering.purdue.edu/cdesign/wp/current-convergence-design-lab-members/' },
+  { name: 'Wolfgang Stuerzlinger', affil: 'Simon Fraser University', affil2: '', country: 'Canada', field: '3D Spatial Interaction · HCI', email: '', tel: '', keynote: null, tracks: ['03'], photo: wolfgangPhoto, website: 'https://vvise.iat.sfu.ca/people/wolfgang-stuerzlinger' },
+  { name: 'Greg Welch', affil: 'UCF', affil2: '', country: 'USA', field: 'AR/VR · Cognitive Science', email: '', tel: '',  tracks: ['01'], photo: gregPhoto, website: 'https://sreal.ucf.edu/sreal/people/welch/' },
 ];
 
 function OrganizerCard({ org }: { org: (typeof organizers)[number] }) {
