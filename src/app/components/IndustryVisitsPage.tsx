@@ -8,7 +8,7 @@ const instMeta: Record<string, { abbr: string; color: string; textColor?: string
   'University of South Australia':   { abbr: 'UniSA',   color: '#E21A32' },
   'University of Calgary':           { abbr: 'UCal',    color: '#D41E30' },
   'Simon Fraser University (SFU)':   { abbr: 'SFU',     color: '#CC0000' },
-  'University of Central Florida':   { abbr: 'UCF',     color: '#FFC904', textColor: '#000' },
+  'University of Central Florida':   { abbr: 'University of Central Florida',     color: '#FFC904', textColor: '#000' },
   'New York University':             { abbr: 'NYU',     color: '#57068C' },
 };
 

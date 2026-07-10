@@ -66,14 +66,20 @@ export function InfrastructurePage() {
         {/* Key facts — horizontal strip */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-slate-100 mb-16">
           {[
-            { icon: <MapPin className="w-5 h-5" />, label: 'Venue', value: 'Sheraton Grand Incheon Hotel, Korea', sub: '' },
+            { icon: <MapPin className="w-5 h-5" />, label: 'Venue', value: 'Sheraton Grand Incheon Hotel, Korea', sub: '', link: 'https://maps.app.goo.gl/zDvc1g3DRNNd7ZTX7' },
             { icon: <Calendar className="w-5 h-5" />, label: 'Dates', value: 'Aug 9–11, 2026', sub: '3 Days · 2 Nights' },
-            { icon: <Users className="w-5 h-5" />, label: 'Participants', value: '100+', sub: '16 Overseas Scholars' },
+            { icon: <Users className="w-5 h-5" />, label: 'Participants', value: '40+', sub: '16 Overseas Scholars' },
           ].map((item, i) => (
             <div key={i} className="bg-white p-6">
               <div className="text-blue-600 mb-3">{item.icon}</div>
               <div className="text-slate-400 text-xs uppercase tracking-widest mb-1">{item.label}</div>
-              <div className="font-black text-slate-900 text-xl leading-tight mb-0.5" style={{ fontFamily: 'Syne, sans-serif' }}>{item.value}</div>
+              {item.link ? (
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-black text-slate-900 hover:text-blue-600 text-xl leading-tight mb-0.5 block underline underline-offset-2 decoration-slate-300" style={{ fontFamily: 'Syne, sans-serif' }}>
+                  {item.value}
+                </a>
+              ) : (
+                <div className="font-black text-slate-900 text-xl leading-tight mb-0.5" style={{ fontFamily: 'Syne, sans-serif' }}>{item.value}</div>
+              )}
               <div className="text-slate-500 text-sm">{item.sub}</div>
             </div>
           ))}

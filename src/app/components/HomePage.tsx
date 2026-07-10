@@ -9,7 +9,7 @@ const keywords = [
 ];
 
 const stats = [
-  { value: '100+', label: 'Participants' },
+  { value: '40+', label: 'Participants' },
   { value: '16', label: 'Overseas Scholars' },
   { value: '4', label: 'Research Tracks' },
   { value: '3', label: 'Days' },
@@ -58,13 +58,19 @@ export function HomePage() {
           <div className="flex flex-wrap gap-6 mb-14 border-t border-white/10 pt-10">
             {[
               { label: 'Date', value: 'Aug 9–11, 2026' },
-              { label: 'Venue', value: 'Sheraton Grand Incheon Hotel, Korea' },
+              { label: 'Venue', value: 'Sheraton Grand Incheon Hotel, Korea', link: 'https://maps.app.goo.gl/zDvc1g3DRNNd7ZTX7' },
               { label: 'Host', value: 'KAIST' },
               { label: 'Invited From', value: 'USA · Australia · New Zealand · Canada · Korea, Republic of' },
             ].map((f) => (
               <div key={f.label} className="min-w-[160px]">
                 <div className="text-slate-600 text-xs uppercase tracking-widest mb-1">{f.label}</div>
-                <div className="text-white text-sm font-semibold">{f.value}</div>
+                {f.link ? (
+                  <a href={f.link} target="_blank" rel="noopener noreferrer" className="text-white text-sm font-semibold hover:text-blue-400 transition-colors underline underline-offset-2 decoration-slate-600">
+                    {f.value}
+                  </a>
+                ) : (
+                  <div className="text-white text-sm font-semibold">{f.value}</div>
+                )}
               </div>
             ))}
           </div>

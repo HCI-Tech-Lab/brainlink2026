@@ -17,6 +17,7 @@ export function Navigation({ activeSection }: NavigationProps) {
     { id: 'committees', label: 'People' },
     { id: 'workshops', label: 'Program' },
     { id: 'placements', label: 'Follow-up' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   const handleNavClick = (sectionId: string) => {

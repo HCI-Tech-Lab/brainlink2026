@@ -7,6 +7,7 @@ import { InfrastructurePage } from './components/InfrastructurePage';
 import { CommitteesPage } from './components/CommitteesPage';
 import { WorkshopsPage } from './components/WorkshopsPage';
 import { PlacementsPage } from './components/PlacementsPage';
+import { ContactPage } from './components/ContactPage';
 
 export default function App() {
   const [activeSection] = useState('home');
@@ -28,6 +29,7 @@ export default function App() {
         <section id="committees"><CommitteesPage /></section>
         <section id="workshops"><WorkshopsPage /></section>
         <section id="placements"><PlacementsPage /></section>
+        <section id="contact"><ContactPage /></section>
       </main>
 
       {/* Footer */}
@@ -40,7 +42,7 @@ export default function App() {
               {([
                 { abbr: 'KAIST',  color: '#1E3A8A' },
                 { abbr: 'AdeUni', color: '#002147' },
-                { abbr: 'UCF',    color: '#000000' },
+                { abbr: 'University of Central Florida',    color: '#000000' },
                 { abbr: 'UW',     color: '#4B2E83' },
                 { abbr: 'MIT',    color: '#A31F34' },
                 { abbr: 'Purdue', color: '#C28E0E' },
@@ -76,6 +78,8 @@ export default function App() {
               <div>© 2026 KAIST</div>
             </div>
           </div>
+
+          
         </div>
       </footer>
     </div>
