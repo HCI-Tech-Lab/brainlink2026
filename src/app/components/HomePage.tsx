@@ -10,7 +10,7 @@ const keywords = [
 
 const stats = [
   { value: '40+', label: 'Participants' },
-  { value: '16', label: 'Overseas Scholars' },
+  { value: '10+', label: 'Overseas Scholars' },
   { value: '4', label: 'Research Tracks' },
   { value: '3', label: 'Days' },
 ];

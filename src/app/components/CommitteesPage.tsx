@@ -6,7 +6,7 @@ import kangPhoto from '../../imports/kang.png';
 import markPhoto from '../../imports/Mark.jpeg';
 import gregPhoto from '../../imports/Greg.jpg';
 import anindPhoto from '../../imports/AnindDey.jpeg';
-import ramaniPhoto from '../../imports/Ramani.jpg.webp';
+import ramaniPhoto from '../../imports/Ramani.jpeg';
 import scottPhoto from '../../imports/Scott.webp';
 import wolfgangPhoto from '../../imports/Wolfgang.png';
 import perlinPhoto from '../../imports/Perlin.jpeg';
@@ -57,9 +57,9 @@ const speakers = [
   { name: 'Anind Dey', affil: 'University of Washington', affil2: '', country: 'USA', field: 'Context-Aware Computing · Cognitive Modeling', email: '', tel: '', keynote: null, tracks: ['01'], photo: anindPhoto, website: 'https://ischool.uw.edu/people/faculty/profile/anind' },
   { name: 'Scott Hudson', affil: 'Carnegie Mellon University', affil2: '', country: 'USA', field: 'HCI · AI', email: '', tel: '', tracks: ['02', '03'], photo: scottPhoto, website: 'https://www.cs.cmu.edu/~hudson/' },
   { name: 'Ken Perlin', affil: 'New York University', affil2: '', country: 'USA', field: 'Computer Graphics · Interactive Technology', email: '', tel: '', tracks: ['04'], photo: perlinPhoto, website: 'https://cs.nyu.edu/~perlin/' },
-  { name: 'Karthik Ramani', affil: 'Purdue University', affil2: '', country: 'USA', field: 'Physical AI · 3D Interaction', email: '', tel: '', keynote: null, tracks: ['02'], photo: ramaniPhoto, website: 'https://engineering.purdue.edu/cdesign/wp/current-convergence-design-lab-members/' },
-  { name: 'Wolfgang Stuerzlinger', affil: 'Simon Fraser University', affil2: '', country: 'Canada', field: '3D Spatial Interaction · HCI', email: '', tel: '', keynote: null, tracks: ['03'], photo: wolfgangPhoto, website: 'https://vvise.iat.sfu.ca/people/wolfgang-stuerzlinger' },
-  { name: 'Greg Welch', affil: 'University of Central Florida', affil2: '', country: 'USA', field: 'AR/VR · Cognitive Science', email: '', tel: '',  tracks: ['01'], photo: gregPhoto, website: 'https://sreal.ucf.edu/sreal/people/welch/' },
+  { name: 'Karthik Ramani', affil: 'Purdue University', affil2: '', country: 'USA', field: 'Physical AI · 3D Interaction', email: '', tel: '', keynote: null, tracks: ['02'], photo: ramaniPhoto, website: 'https://engineering.purdue.edu/cdesign/wp/current-convergence-design-lab-members/', zoom: 1.5, position: 'center 20%' },
+  { name: 'Wolfgang Stuerzlinger', affil: 'Simon Fraser University', affil2: '', country: 'Canada', field: '3D Spatial Interaction · HCI', email: '', tel: '', keynote: null, tracks: ['03'], photo: wolfgangPhoto, website: 'https://vvise.iat.sfu.ca/people/wolfgang-stuerzlinger', zoom: 1.7, position: 'center 20%'},
+  { name: 'Greg Welch', affil: 'University of Central Florida', affil2: '', country: 'USA', field: 'AR/VR · Cognitive Science', email: '', tel: '',  tracks: ['01'], photo: gregPhoto, website: 'https://sreal.ucf.edu/sreal/people/welch/', zoom: 1.5, position: 'center 5%' },
 ];
 
 function OrganizerCard({ org }: { org: (typeof organizers)[number] }) {
@@ -140,7 +140,12 @@ export function CommitteesPage() {
                     <ImageWithFallback
                       src={sp.photo}
                       alt={sp.name}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      style={{
+                        objectPosition: 'position' in sp && sp.position ? sp.position : 'center',
+                        transform: `scale(${'zoom' in sp && sp.zoom ? sp.zoom : 1})`,
+                        transformOrigin: 'position' in sp && sp.position ? sp.position : 'center',
+                      }}
                     />
                   </div>
                   <div className="p-3 border-t border-white/10">
@@ -166,7 +171,12 @@ export function CommitteesPage() {
                     <ImageWithFallback
                       src={sp.photo}
                       alt={sp.name}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      style={{
+                        objectPosition: 'position' in sp && sp.position ? sp.position : 'center',
+                        transform: `scale(${'zoom' in sp && sp.zoom ? sp.zoom : 1})`,
+                        transformOrigin: 'position' in sp && sp.position ? sp.position : 'center',
+                      }}
                     />
                   </div>
                   {/* Caption */}
