@@ -7,29 +7,19 @@ const keynotes = [
     speaker: 'Mark Billinghurst',
     affil: 'Adelaide University',
     title: 'Empathic Computing: Designing Human-Centric Spatial AI',
-    track: 'Track 01',
   },
   {
     n: '02',
     speaker: 'Scott Hudson',
     affil: 'Carnegie Mellon University',
     title: 'The Next User Interface: From Desktop to a World of Spatial AI',
-    track: 'Track 03',
   },
   {
     n: '03',
     speaker: 'Ken Perlin',
     affil: 'New York University',
     title: 'The Future of Being There: Avatars, Agents, and Communication in a Blended World',
-    track: 'Track 04',
   },
-];
-
-const tracks = [
-  { n: '01', title: 'Context-Aware AI & Empathic XR', agenda: 'Predicting XR user experience with omnimodal AI' },
-  { n: '02', title: 'Spatio-Temporal & Material Traces', agenda: 'AI for transcending time, space, and material' },
-  { n: '03', title: '3D Spatial Intelligence & Augmented UI', agenda: 'Intelligent toolkits for XR interaction authoring' },
-  { n: '04', title: 'Grand Challenges · Intelligent Spaces', agenda: 'Multidisciplinary roadmap & brain circulation plan' },
 ];
 
 const formats = [
@@ -78,31 +68,11 @@ export function WorkshopsPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-slate-400 text-xs">{k.affil}</div>
-                  <div className="text-blue-500 text-xs font-semibold">{k.track}</div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-
-        {/* Research tracks — compact grid */}
-        {/* <div className="mb-16">
-          <div className="text-slate-400 text-xs uppercase tracking-widest mb-6">Research Tracks</div>
-          <div className="grid md:grid-cols-2 gap-px bg-slate-100">
-            {tracks.map((t) => (
-              <div key={t.n} className="bg-white p-6 group hover:bg-blue-600 transition-all duration-300">
-                <div className="flex items-start justify-between mb-3">
-                  <span className="text-5xl font-black text-slate-100 group-hover:text-blue-400 leading-none transition-colors" style={{ fontFamily: 'Syne, sans-serif' }}>{t.n}</span>
-                </div>
-                <div className="font-black text-slate-900 group-hover:text-white text-sm mb-3 transition-colors">{t.title}</div>
-                <div className="flex items-center gap-1.5 text-xs text-slate-400 group-hover:text-blue-200 transition-colors">
-                  <div className="w-1 h-1 bg-blue-500 group-hover:bg-blue-200 flex-shrink-0" />
-                  {t.agenda}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
 
         {/* Session formats — compact icon grid */}
         <div>
