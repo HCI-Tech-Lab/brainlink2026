@@ -5,7 +5,7 @@ const keynotes = [
   {
     n: '01',
     speaker: 'Mark Billinghurst',
-    affil: 'Adelaide University / Univ. of Auckland',
+    affil: 'Adelaide University',
     title: 'Empathic Computing: Designing Human-Centric Spatial AI',
     track: 'Track 01',
   },
