@@ -153,10 +153,10 @@ export function CommitteesPage() {
                     <ImageWithFallback
                       src={sp.photo}
                       alt={sp.name}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 [transform:scale(var(--zoom))] group-hover:[transform:scale(calc(var(--zoom)*1.05))]"
                       style={{
                         objectPosition: 'position' in sp && sp.position ? sp.position : 'center',
-                        transform: `scale(${'zoom' in sp && sp.zoom ? sp.zoom : 1})`,
+                        ['--zoom' as string]: `${'zoom' in sp && sp.zoom ? sp.zoom : 1}`,
                         transformOrigin: 'position' in sp && sp.position ? sp.position : 'center',
                       }}
                     />
@@ -184,10 +184,10 @@ export function CommitteesPage() {
                     <ImageWithFallback
                       src={sp.photo}
                       alt={sp.name}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 [transform:scale(var(--zoom))] group-hover:[transform:scale(calc(var(--zoom)*1.05))]"
                       style={{
                         objectPosition: 'position' in sp && sp.position ? sp.position : 'center',
-                        transform: `scale(${'zoom' in sp && sp.zoom ? sp.zoom : 1})`,
+                        ['--zoom' as string]: `${'zoom' in sp && sp.zoom ? sp.zoom : 1}`,
                         transformOrigin: 'position' in sp && sp.position ? sp.position : 'center',
                       }}
                     />

@@ -4,7 +4,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 const keynotes = [
   {
     speaker: 'Mark Billinghurst',
-    affil: 'University of Adelaide / University of Auckland',
+    affil: 'University of Adelaide',
     title: 'Empathic Computing: Designing Human-Centric Spatial AI',
     track: 'Session 1',
   },
