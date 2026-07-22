@@ -4,9 +4,15 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 const keynotes = [
   {
     speaker: 'Mark Billinghurst',
-    affil: 'Adelaide University',
+    affil: 'University of Adelaide / University of Auckland',
     title: 'Empathic Computing: Designing Human-Centric Spatial AI',
-    track: 'Track 01',
+    track: 'Session 1',
+  },
+  {
+    speaker: 'Ken Perlin',
+    affil: 'New York University',
+    title: 'AI-enhanced Migratory User Interfaces for Collaborative Mixed Reality',
+    track: 'Session 1',
   },
   {
     speaker: 'Anind K. Dey',
@@ -17,15 +23,26 @@ const keynotes = [
   {
     speaker: 'Scott Hudson',
     affil: 'Carnegie Mellon University',
-    title: 'The Next User Interface: From Desktop to a World of Spatial AI',
-    track: 'Track 03',
+    title: 'Human Aspects of Human-AI Collaboration in Generative Design Systems',
+    track: 'Session 2',
   },
   {
-    n: '03',
-    speaker: 'Ken Perlin',
-    affil: 'New York University',
-    title: 'The Future of Being There: Avatars, Agents, and Communication in a Blended World',
-    track: 'Track 04',
+    speaker: 'Wolfgang Stuerzlinger',
+    affil: 'Simon Fraser University',
+    title: 'Efficient Input Modalities and Interaction Techniques for Omnimodal AI-XR',
+    track: 'Session 2',
+  },
+  {
+    speaker: 'Greg Welch',
+    affil: 'University of Central Florida',
+    title: 'Beyond XR',
+    track: 'Session 3',
+  },
+  {
+    speaker: 'Karthik Ramani',
+    affil: 'Purdue University',
+    title: 'TBA',
+    track: 'Session 3',
   },
 ];
 
