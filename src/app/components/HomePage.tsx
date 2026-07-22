@@ -87,7 +87,7 @@ export function HomePage() {
               onClick={() => scrollTo('committees')}
               className="px-6 py-3 border border-white/20 hover:border-white/50 text-white text-sm font-semibold transition-all"
             >
-              FeaturedSpeakers
+              People
             </button>
           </div>
         </div>
