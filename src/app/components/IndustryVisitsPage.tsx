@@ -14,7 +14,7 @@ const instMeta: Record<string, { abbr: string; color: string; textColor?: string
 
 const institutions = [
   { name: 'MIT Media Lab',                    scholars: ['Hiroshi Ishii'],                  field: 'Tangible UI · Physical AI',              track: '02' },
-  { name: 'Carnegie Mellon University (CMU)', scholars: ['Anind K. Dey', 'Scott Hudson'],   field: 'Context-Aware Computing · HCI · AI',     track: '01 & 03' },
+  { name: 'Carnegie Mellon University (CMU)', scholars: ['Anind Dey', 'Scott Hudson'],   field: 'Context-Aware Computing · HCI · AI',     track: '01 & 03' },
   { name: 'Purdue University',                scholars: ['Karthik Ramani'],                 field: 'Physical AI · 3D Interaction',           track: '02' },
   { name: 'University of South Australia',    scholars: ['Mark Billinghurst'],              field: 'HCI · AR/VR · Empathic Computing',       track: '01' },
   { name: 'University of Calgary',            scholars: ['Kangsoo Kim'],                    field: 'Electrical & Software Engineering',      track: 'Organizer' },

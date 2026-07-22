@@ -15,7 +15,7 @@ const keynotes = [
     track: 'Session 1',
   },
   {
-    speaker: 'Anind K. Dey',
+    speaker: 'Anind Dey',
     affil: 'University of Washington',
     title: 'Leveraging omnimodal AI to understand personal health',
     track: 'Session 2',
