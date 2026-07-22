@@ -3,25 +3,46 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const keynotes = [
   {
-    n: '01',
     speaker: 'Mark Billinghurst',
-    affil: 'Adelaide University / Univ. of Auckland',
+    affil: 'Adelaide University ',
     title: 'Empathic Computing: Designing Human-Centric Spatial AI',
-    track: 'Track 01',
+    track: 'Session 1',
   },
   {
-    n: '02',
-    speaker: 'Scott Hudson',
-    affil: 'Carnegie Mellon University',
-    title: 'The Next User Interface: From Desktop to a World of Spatial AI',
-    track: 'Track 03',
-  },
-  {
-    n: '03',
     speaker: 'Ken Perlin',
     affil: 'New York University',
-    title: 'The Future of Being There: Avatars, Agents, and Communication in a Blended World',
-    track: 'Track 04',
+    title: 'AI-enhanced Migratory User Interfaces for Collaborative Mixed Reality',
+    track: 'Session 1',
+  },
+  {
+    speaker: 'Anind K. Dey',
+    affil: 'University of Washington',
+    title: 'Leveraging omnimodal AI to understand personal health',
+    track: 'Session 2',
+  },
+  {
+    speaker: 'Scott Hudson',
+    affil: 'Carnegie Mellon University',
+    title: 'Human Aspects of Human-AI Collaboration in Generative Design Systems',
+    track: 'Session 2',
+  },
+  {
+    speaker: 'Wolfgang Stuerzlinger',
+    affil: 'Simon Fraser University',
+    title: 'Efficient Input Modalities and Interaction Techniques for Omnimodal AI-XR',
+    track: 'Session 2',
+  },
+  {
+    speaker: 'Greg Welch',
+    affil: 'University of Central Florida',
+    title: 'Beyond XR',
+    track: 'Session 3',
+  },
+  {
+    speaker: 'Karthik Ramani',
+    affil: 'Purdue University',
+    title: 'TBA',
+    track: 'Session 3',
   },
 ];
 
@@ -70,11 +91,10 @@ export function WorkshopsPage() {
           <div className="text-slate-400 text-xs uppercase tracking-widest py-4">Keynote Lectures</div>
           <div className="divide-y divide-slate-50">
             {keynotes.map((k) => (
-              <div key={k.n} className="py-6 grid md:grid-cols-4 gap-4 items-center group hover:bg-slate-50 px-2 transition-all">
-                <div className="text-slate-200 text-5xl font-black leading-none" style={{ fontFamily: 'Syne, sans-serif' }}>{k.n}</div>
+              <div key={k.speaker} className="py-6 grid md:grid-cols-3 gap-4 items-center group hover:bg-slate-50 px-2 transition-all">
                 <div className="md:col-span-2">
                   <div className="font-black text-slate-900 text-base mb-0.5" style={{ fontFamily: 'Syne, sans-serif' }}>{k.speaker}</div>
-                  <div className="text-blue-600 text-sm italic">"{k.title}"</div>
+                  {k.title && <div className="text-blue-600 text-sm italic">"{k.title}"</div>}
                 </div>
                 <div className="text-right">
                   <div className="text-slate-400 text-xs">{k.affil}</div>

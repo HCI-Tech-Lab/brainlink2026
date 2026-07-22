@@ -3,13 +3,13 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Phone, Globe } from 'lucide-react';
 import sangPhoto from '../../imports/Sang.png';
 import kangPhoto from '../../imports/kang.png';
-import markPhoto from '../../imports/Mark.jpeg';
+import markPhoto from '../../imports/Mark.jpg';
 import gregPhoto from '../../imports/Greg.jpg';
-import anindPhoto from '../../imports/AnindDey.jpeg';
+import anindPhoto from '../../imports/AnindDey.jpg';
 import ramaniPhoto from '../../imports/Ramani.jpeg';
-import scottPhoto from '../../imports/Scott.webp';
+import scottPhoto from '../../imports/Scott.jpg';
 import wolfgangPhoto from '../../imports/Wolfgang.png';
-import perlinPhoto from '../../imports/Perlin.jpeg';
+import perlinPhoto from '../../imports/Perlin.png';
 import jinwookPhoto from '../../imports/JW.jpg';
 import youjinPhoto from '../../imports/YS.jpeg';
 
@@ -53,13 +53,26 @@ const organizers = [
 ];
 
 const speakers = [
-  { name: 'Mark Billinghurst', affil: 'Adelaide University', affil2: 'University of Auckland', country: 'NZ / Australia', field: 'HCI · AR/VR · Empathic Computing', email: 'mark.billinghurst@unisa.edu.au', tel: '0406 407 031',  tracks: ['01'], photo: markPhoto, website: 'https://empathiccomputing.org/team/mark-billinghurst/' },
-  { name: 'Anind Dey', affil: 'University of Washington', affil2: '', country: 'USA', field: 'Context-Aware Computing · Cognitive Modeling', email: '', tel: '', keynote: null, tracks: ['01'], photo: anindPhoto, website: 'https://ischool.uw.edu/people/faculty/profile/anind' },
-  { name: 'Scott Hudson', affil: 'Carnegie Mellon University', affil2: '', country: 'USA', field: 'HCI · AI', email: '', tel: '', tracks: ['02', '03'], photo: scottPhoto, website: 'https://www.cs.cmu.edu/~hudson/' },
-  { name: 'Ken Perlin', affil: 'New York University', affil2: '', country: 'USA', field: 'Computer Graphics · Interactive Technology', email: '', tel: '', tracks: ['04'], photo: perlinPhoto, website: 'https://cs.nyu.edu/~perlin/' },
-  { name: 'Karthik Ramani', affil: 'Purdue University', affil2: '', country: 'USA', field: 'Physical AI · 3D Interaction', email: '', tel: '', keynote: null, tracks: ['02'], photo: ramaniPhoto, website: 'https://engineering.purdue.edu/cdesign/wp/current-convergence-design-lab-members/', zoom: 1.5, position: 'center 20%' },
-  { name: 'Wolfgang Stuerzlinger', affil: 'Simon Fraser University', affil2: '', country: 'Canada', field: '3D Spatial Interaction · HCI', email: '', tel: '', keynote: null, tracks: ['03'], photo: wolfgangPhoto, website: 'https://vvise.iat.sfu.ca/people/wolfgang-stuerzlinger', zoom: 1.7, position: 'center 20%'},
-  { name: 'Greg Welch', affil: 'University of Central Florida', affil2: '', country: 'USA', field: 'AR/VR · Cognitive Science', email: '', tel: '',  tracks: ['01'], photo: gregPhoto, website: 'https://sreal.ucf.edu/sreal/people/welch/', zoom: 1.5, position: 'center 5%' },
+  { name: 'Mark Billinghurst', affil: 'Adelaide University', affil2: 'University of Auckland', country: 'NZ / Australia', field: 'HCI · AR/VR · Empathic Computing', email: 'mark.billinghurst@unisa.edu.au', tel: '0406 407 031',  tracks: ['01'], photo: markPhoto, website: 'https://empathiccomputing.org/team/mark-billinghurst/', zoom: 1.3, position: 'center 20%',
+    title: 'Empathic Computing: Designing Human-Centric Spatial AI',
+    abstract: 'This presentation gives an overview of Empathic Computing and how AI can be used to create more human-centric collaborative experiences. Empathic Computing involves combining elements of XR, spatial computing, physiological sensing and AI to enable people to connect in ways that have not been possible before. Examples of Empathic Computing systems will be shown, and opportunities for future research discussed.' },
+  { name: 'Anind Dey', affil: 'University of Washington', affil2: '', country: 'USA', field: 'Context-Aware Computing · Cognitive Modeling', email: 'anind@uw.edu', tel: '', keynote: null, tracks: ['01'], photo: anindPhoto, website: 'https://ischool.uw.edu/people/faculty/profile/anind',
+    title: 'Leveraging omnimodal AI to understand personal health',
+    abstract: "Mobile devices allow for the collection of a large amount of data about people's behaviors and their interactions with the physical and virtual world. Data that is mostly discarded as being unimportant can be used to build models of human behavior to identify health behaviors of interest. Over the past several years, my research lab has leveraged omnimodal AI to detect and predict health behaviors to support early intervention. This talk will overview the progress that we've made and the challenges still to be addressed." },
+  { name: 'Scott Hudson', affil: 'Carnegie Mellon University', affil2: '', country: 'USA', field: 'HCI · AI', email: 'scott.hudson@cs.cmu.edu', tel: '', tracks: ['02', '03'], photo: scottPhoto, website: 'https://www.cs.cmu.edu/~hudson/',
+    title: 'Human Aspects of Human-AI Collaboration in Generative Design Systems',
+    abstract: 'AI-based systems supporting design have made tremendous strides in the kinds of design problems they can attempt, providing significant value as a result. However, the majority of current generative design systems don\'t really consider humans to be "part of the system", or when they do, have a model of the user as a simple source of data. But, a partnership which makes both people and AI part of a cooperative system, is likely to produce richer and more powerful results. In this talk, I will consider some of the research challenges we face in moving beyond "users as data sources" and towards collaborative endeavors in which human users are "part of the system."' },
+  { name: 'Ken Perlin', affil: 'New York University', affil2: '', country: 'USA', field: 'Computer Graphics · Interactive Technology', email: 'ken.perlin@gmail.com', tel: '', tracks: ['04'], photo: perlinPhoto, website: 'https://cs.nyu.edu/~perlin/',
+    title: 'AI-enhanced Migratory User Interfaces for Collaborative Mixed Reality',
+    abstract: 'Information lives everywhere, yet we interact with it in different ways, depending on how and where we encounter it. Recent advances in wearables now allow us to explore ways to seamlessly integrate the physical world into our workflow as we do knowledge work with our computers, with the assistance of artificial intelligence. In this talk I will explore how AI-assisted migratory user interfaces that support seamless transitions between screen-based workspaces and immersive workspaces can improve productivity, learning and collaboration.' },
+  { name: 'Karthik Ramani', affil: 'Purdue University', affil2: '', country: 'USA', field: 'Physical AI · 3D Interaction', email: 'ramani@purdue.edu', tel: '', keynote: null, tracks: ['02'], photo: ramaniPhoto, website: 'https://engineering.purdue.edu/cdesign/wp/current-convergence-design-lab-members/', zoom: 1.2, position: 'center 20%',
+    title: '', abstract: '' },
+  { name: 'Wolfgang Stuerzlinger', affil: 'Simon Fraser University', affil2: '', country: 'Canada', field: '3D Spatial Interaction · HCI', email: 'w_s@sfu.ca', tel: '', keynote: null, tracks: ['03'], photo: wolfgangPhoto, website: 'https://vvise.iat.sfu.ca/people/wolfgang-stuerzlinger', zoom: 1.7, position: 'center 20%',
+    title: 'Efficient Input Modalities and Interaction Techniques for Omnimodal AI-XR',
+    abstract: 'Towards novel omnimodal interfaces, I start with an overview of current input technologies and their limitations. For 3D docking tasks, I then discuss a combination of bare-hand input techniques that enables more precise 3D interaction and a novel mapping for a 2D mouse that eclipses what a 3D controller can achieve. For text input, I discuss a novel method to evaluate new text entry methods, including gaze-based ones. Subsequently, I present a new system that uses an XR-LLM assistant during desktop writing tasks, which identifies that crossing between realities introduces a cost.' },
+  { name: 'Greg Welch', affil: 'University of Central Florida', affil2: '', country: 'USA', field: 'AR/VR · Cognitive Science', email: 'welch@ucf.edu', tel: '',  tracks: ['01'], photo: gregPhoto, website: 'https://sreal.ucf.edu/sreal/people/welch/', zoom: 1.5, position: 'center 5%',
+    title: 'Beyond XR',
+    abstract: 'Today\'s XR systems, watches, rings, and smart glasses are each converging within their own technology categories. The next frontier may be convergence across those categories. For some time, I have been considering a centralized sensing and stimulation framework that observes a user, makes sense of what is happening, and then helps them in meaningful ways, combining measures of the user and the environment obtained from advanced body-worn devices to inform, assist, or influence the user in helpful ways.' },
 ];
 
 function OrganizerCard({ org }: { org: (typeof organizers)[number] }) {
