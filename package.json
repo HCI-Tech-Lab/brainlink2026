@@ -80,7 +80,7 @@
     },
     "react-dom": {
       "optional": true
-    } 
+    }
   },
   "pnpm": {
     "overrides": {

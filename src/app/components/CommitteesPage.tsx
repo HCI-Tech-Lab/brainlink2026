@@ -76,8 +76,12 @@ const speakers = [
 ];
 
 function OrganizerCard({ org }: { org: (typeof organizers)[number] }) {
+  const Wrapper = org.website ? 'a' : 'div';
+  const wrapperProps = org.website
+    ? { href: org.website, target: '_blank', rel: 'noreferrer' }
+    : {};
   return (
-    <div className="bg-[#060D1F] group overflow-hidden">
+    <Wrapper {...wrapperProps} className="bg-[#060D1F] group overflow-hidden block">
       <div className="aspect-square overflow-hidden">
         <ImageWithFallback
           src={org.photo}
@@ -93,12 +97,12 @@ function OrganizerCard({ org }: { org: (typeof organizers)[number] }) {
           <div className="text-slate-500 text-[10px] mt-0.5">{org.affil} · {org.role}</div>
         </div>
         {org.website && (
-          <a href={org.website} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-blue-400 text-[10px] hover:text-blue-300">
+          <div className="flex items-center gap-1.5 text-blue-400 text-[10px] group-hover:text-blue-300">
             <Globe className="w-2.5 h-2.5" />Website
-          </a>
+          </div>
         )}
       </div>
-    </div>
+    </Wrapper>
   );
 }
 

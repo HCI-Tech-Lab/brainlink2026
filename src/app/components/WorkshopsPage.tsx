@@ -41,7 +41,7 @@ const keynotes = [
   {
     speaker: 'Karthik Ramani',
     affil: 'Purdue University',
-    title: 'TBA',
+    title: 'From Spatial Computing to Human–Physical AI: Understanding, Authoring, and Interacting in Omnimodal Intelligent Spaces',
     track: 'Session 3',
   },
 ];
