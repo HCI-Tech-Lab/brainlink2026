@@ -60,7 +60,7 @@ export function HomePage() {
               { label: 'Date', value: 'Aug 9–11, 2026' },
               { label: 'Venue', value: 'Sheraton Grand Incheon Hotel, Korea', link: 'https://maps.app.goo.gl/zDvc1g3DRNNd7ZTX7' },
               { label: 'Host', value: 'KAIST' },
-              { label: 'Invited From', value: 'USA · Australia · New Zealand · Canada · Korea, Republic of' },
+              { label: 'Invited From', value: 'Australia · Canada · Korea, Republic of · USA' },
             ].map((f) => (
               <div key={f.label} className="min-w-[160px]">
                 <div className="text-slate-600 text-xs uppercase tracking-widest mb-1">{f.label}</div>
